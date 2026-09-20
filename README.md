@@ -1,10 +1,29 @@
 # Empirical-Orthogonal-Function-EOF-
-Aplicación de EOF
 
---
-Análisis de la variabilidad conjunta entre isoterma 0 y temperatura superficial (2 m) mediante EOF combinada por estaciones del año.
-El script está diseñado para el análisis del primer modo en cada caso.
+Demo interactiva de descomposición en **Funciones Ortogonales Empíricas (EOF)** sobre datos reales de temperatura y precipitación (ERA5, 1940-2024) en la zona de Bío-Bío/Araucanía.
 
-El script de verano incluye Point-to-Point correlation entre las anomalías estandarizadas de la altura de la isoterma 0 y la temperatura cerca de  la superficie; y además, una reconstrucción de ambos campos usando los tres primeros modos de la EOF ya aplicada (CEOF)
+🔗 **Demo en vivo:** _pendiente de desplegar — ver instrucciones abajo_
 
-Este código pertenece a la tarea final del curso Análisis Estadísticos en Climatología (Sábado 02 de julio, 2022)
+## Qué hace
+
+Elegí la variable (temperatura o precipitación) y el modo EOF, y la app muestra al instante el patrón espacial de ese modo y su serie de tiempo (componente principal), junto con el % de varianza explicada.
+
+El método (SVD sobre las anomalías mensuales, ponderadas por área) es una implementación en Python fiel al script [`EOF.m`](matlab_exercise/EOF.m) original de la tarea del curso *Análisis Estadísticos en Climatología* — ver [`eof/eof_model.py`](eof/eof_model.py) y sus verificaciones matemáticas en [`eof/tests/test_eof_model.py`](eof/tests/test_eof_model.py) (ortogonalidad de los EOFs, no correlación de los PCs, reconstrucción exacta).
+
+## Correr en local
+
+```bash
+cd eof
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Desplegar gratis (Streamlit Community Cloud)
+
+1. Andá a [share.streamlit.io](https://share.streamlit.io) y conectate con tu cuenta de GitHub.
+2. "New app" → elegí este repo, branch `main`, main file path `eof/app.py`.
+3. Deploy. En un par de minutos tenés el link público.
+
+## Ejercicio original (MATLAB)
+
+El script `EOF.m` y las tareas por estación del curso original quedaron en [`matlab_exercise/`](matlab_exercise/).
