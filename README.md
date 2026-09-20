@@ -2,7 +2,9 @@
 
 Demo interactiva de descomposición en **Funciones Ortogonales Empíricas (EOF)** sobre datos reales de temperatura y precipitación (ERA5, 1940-2024) en la zona de Bío-Bío/Araucanía.
 
-🔗 **Demo en vivo:** _pendiente de desplegar — ver instrucciones abajo_
+🔗 **Demo en vivo:** [empiric-dxizwbw8eobxwyg5tw29qr.streamlit.app](https://empiric-dxizwbw8eobxwyg5tw29qr.streamlit.app/)
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://empiric-dxizwbw8eobxwyg5tw29qr.streamlit.app/)
 
 ## Qué hace
 
@@ -17,12 +19,6 @@ cd eof
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-## Desplegar gratis (Streamlit Community Cloud)
-
-1. Andá a [share.streamlit.io](https://share.streamlit.io) y conectate con tu cuenta de GitHub.
-2. "New app" → elegí este repo, branch `main`, main file path `eof/app.py`.
-3. Deploy. En un par de minutos tenés el link público.
 
 ## Ejercicio original (MATLAB)
 
